@@ -107,21 +107,6 @@ void juego(Juego &juego){
 
 				fusionar(juego.tablero, filaColocar, columnas, valor, juego.puntuacion);
 
-				for (int i = 0; i < numFilas; i++){
-					for (int k = 0; k < numColumnas; k++){
-						if(obtenerValorTablero(juego.tablero, i, k) != 0){
-							fusionar(juego.tablero, i, k, obtenerValorTablero(juego.tablero, i, k), juego.puntuacion);
-						}
-					}
-				}
-/*
-				for (int i = 0; i < numFilas; i++){
-					cout << "\n";
-					for (int j = 0; j < numColumnas; j++){
-						cout << obtenerValorTablero(t, i, j) << " ";
-					}
-				}
-*/
 				obtenerValorMaximoTablero(juego.tablero, exponente);
 
 				exponente = 1+ rand()%exponente;
